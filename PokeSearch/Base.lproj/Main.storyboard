@@ -36,6 +36,15 @@
                                     <action selector="spotRandomPokemon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWe-Pu-IOO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-Oc-VSx">
+                                <rect key="frame" x="264" y="28" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TEST"/>
+                                <connections>
+                                    <action selector="testBtnPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ns-MD-jH2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,6 +58,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="38R-kp-zee" id="Ojx-Np-mDM"/>
+                        <outlet property="testBtn" destination="Ccw-Oc-VSx" id="igq-KA-zrV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

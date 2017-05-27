@@ -87,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				AB591AA71ED98532001BD6B3 /* Model */,
+				AB591AA81ED98540001BD6B3 /* View */,
 				AB591AA91ED98546001BD6B3 /* Controller */,
 				AB591A8C1ED97942001BD6B3 /* GeoFire */,
 				AB591A781ED86BEF001BD6B3 /* AppDelegate.swift */,
@@ -141,7 +142,6 @@
 		AB591AA71ED98532001BD6B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB591AA81ED98540001BD6B3 /* View */,
 				AB591AAA1ED98741001BD6B3 /* PokeAnnotation.swift */,
 			);
 			name = Model;

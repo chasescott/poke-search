@@ -13,6 +13,7 @@ import FirebaseDatabase
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var testBtn: UIButton!
     
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
@@ -103,8 +104,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     
     //Chase:
-    func createSighting(forLocation location: CLLocation, withPokemon pokeId: Int) {
-        geoFire.setLocation(location, forKey: "\(pokeId)")
+    func createSighting(forLocation location: CLLocation, withWhatever whateverId: Int) {
+        geoFire.setLocation(location, forKey: "\(whateverId)")
+    }
+    
+    func createOddSighting() {
+        geoFire.setLocation(CLLocation(latitude: 37.7853889, longitude: -122.4056973), forKey: "firebase-hq")
     }
     
     
@@ -142,14 +147,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    
+    @IBOutlet weak var testBtnPressed: UIButton!
+    @IBAction func testBtnPushed(_ sender: Any) {
+        createOddSighting()
+    }
     
     //Chase:
     @IBAction func spotRandomPokemon(_ sender: Any) {
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         
         let rand = arc4random_uniform(150) + 1
-        createSighting(forLocation: loc, withPokemon: Int(rand))
+        createSighting(forLocation: loc, withWhatever: Int(rand))
     }
 
 }
